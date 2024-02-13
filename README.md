@@ -21,14 +21,14 @@
 ## URL 🌼
 To interact with the web platform, please access: <a href="https://image-editor-vividly.netlify.app/" target="_blank">⚡Image-Editor </a>
 
+## FIGMA 🎈
+In this link you will be able to observe the mockups created in <a href="https://www.figma.com/file/NWsWUC4IPL9DhrvKeS8RPo/VIV_FIG_TEST?type=design&node-id=0%3A1&mode=design&t=ndyHy51Qz24hFrvk-1" target="_blank">Figma</a>.
+
 
 ## Preview 💟
   <div style="display: flex; justify-content: center; margin: 30">
-   <img src="https://github.com/OswaldoAPF/images/blob/main/editor%207.png?raw=true" width="400" height="200" alt="">
    <img src="https://github.com/OswaldoAPF/images/blob/main/editor%201.png?raw=true" width="400" height="200" alt="">
-   <img src="https://github.com/OswaldoAPF/images/blob/main/editor%203.png?raw=true" width="400" height="200" alt="">
     <br>
-    <img src="https://raw.githubusercontent.com/OswaldoAPF/images/main/editor%204.png" width="320" height="400" alt=""> 
     <img src="https://github.com/OswaldoAPF/images/blob/main/editor%205.png?raw=true" width="220" height="400" alt="">
     <img src="https://github.com/OswaldoAPF/images/blob/main/editor%206.png?raw=true" width="220" height="400" alt="">
   </div>
