@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="shortcut icon" href="./assets/img/logo2.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Image Editor - ViVidly</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="./assets/img/logo.png" alt="logo" />
+    <img class="logo2" src="./assets/img/logo2.png" alt="logo" />
+
+    <div class="container__proyect">
+      <div class="input__project__name"><p class="proyect__name__default"></p></div>
+      <span class="material-icons-outlined proyect__name__cloud" title="Save in the cloud">cloud</span>
+    </div>
+
+    <div class="container__options">
+      <button class="button__option" title="Save">
+        <span class="material-icons-outlined">save</span>
+      </button>
+      <button class="button__option" title="New project">
+        <span class="material-icons-outlined" id="newProjectButton">add_circle_outline</span>
+      </button>
+      <button class="button__option" title="Account">
+        <span class="material-icons-outlined">account_circle</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container__menu">
+      
+      <div id="adjustButton" class="button__menu__icon selected">
+        <button><span class="material-icons">tune</span></button>
+        <button>ADJUST</button>
+      </div>
+      <div class="button__menu__icon">
+        <button>
+          <span class="material-icons">brush</span>
+        </button>
+        <button>BRUSHES</button>
+      </div>
+      <div class="button__menu__icon">
+        <button>
+          <span class="material-icons">star</span>
+        </button>
+        <button>ELEMENTS</button>
+      </div>
+      <div class="button__menu__icon">
+        <button>
+          <span class="material-icons">wallpaper</span>
+        </button>
+        <button>FRAMES</button>
+      </div>
+      <div class="button__menu__icon">
+        <button>
+          <span class="material-icons">emoji_emotions</span>
+        </button>
+        <button>ICONS</button>
+      </div>
+      <div class="button__menu__icon">
+        <button>
+          <span class="material-icons">add_photo_alternate</span>
+        </button>
+        <button>IMAGE</button>
+      </div>
+      <div class="button__menu__icon">
+        <button>
+          <span class="material-icons">qr_code</span>
+        </button>
+        <button>QR CODE</button>
+      </div>
+      <div class="button__menu__icon">
+        <button>
+          <span class="material-icons">category</span>
+        </button>
+        <button>SHAPES</button>
+      </div>
+      <div class="button__menu__icon">
+        <button>
+          <span class="material-icons">title</span>
+        </button>
+        <button>TEXT</button>
+      </div>
+      <div class="button__menu__icon">
+        <button>
+          <span class="material-icons">settings</span>
+        </button>
+        <button>SETTINGS</button>
+      </div>
+    </div>
+
+
+    <div class="container__content menu__opened">
+      <label for="fileInput" class="upload__label">
+        <span class="material-icons image__search__icon">image_search</span>
+        <p class="text__search__icon">
+          <input type="file" id="fileInput" class="file__input" accept="image/*">
+          <span>Upload</span> your image</p>
+      </label>
+      
+    <div class="image__preview" id="imagePreview"></div>
+    </div>
+
+
+    <div class="modal__adjust">
+      <details open>
+        <summary>Basic Adjust<span class="material-icons-outlined">expand_more</span></summary>
+        <div class="container__adjust">
+          <button><span class="material-icons-outlined">crop</span> Crop</button>
+          <button><span class="material-icons-outlined">refresh</span>Rotate</button>
+          <button><span class="material-icons-outlined">aspect_ratio</span>Resize</button>
+        </div>
+      </details>
+      <details open>
+        <summary>Advanced Adjust<span class="material-icons-outlined">expand_more</span></summary>
+        <div class="container__adjust">
+          <button><span class="material-icons">auto_fix_high</span>Quick Filters</button>
+          <button> <span class="material-icons">light_mode</span> Gamma</button>
+          <button><span class="material-icons">palette</span>Blend Color</button>
+          <button><span class="material-icons-outlined">swap_horiz</span>Duotone Effect</button>
+          <button><span class="material-icons-outlined">swap_horiz</span>Swap Colors</button>
+          <button> <span class="material-icons">tune</span>Advanced Edits</button>
+        </div>
+      </details>
+
+      <div class="close__modal">
+        <span class="material-icons-outlined chevron__modal">chevron_left</span>
+      </div>
+    </div>
+
+    <div class="options__bar">
+      <div class="container__options__bar">
+        <button id="layers" title="Layers">
+          <span class="material-icons-outlined icon__options__bar">layers</span>
+        </button>
+      </div>
+      <div class="container__options__bar">
+        <button id="crop" title="Crop">
+          <span class="material-icons-outlined icon__options__bar">crop_free</span>
+        </button>
+        <button id="fit" title="Fit">
+          <span class="material-icons-outlined icon__options__bar">fit_screen</span>
+        </button>
+        <div class="zoom__bar">
+          <button id="minus" title="- Zoom">
+            <span class="material-icons-outlined">remove_circle_outline</span>
+          </button>
+        <div class="zoom__line">
+          <div class="zoom__bar__content">
+            <div id="slider">
+              <div class="sl__top"></div>
+              <div class="sl__bot"></div>
+            </div>
+          </div>
+        </div>
+        <button id="plus" title="+ Zoom">
+          <span class="material-icons-outlined">add_circle_outline</span>
+        </button>
+        <div class="zoom__percentage" title="Percentage"></div>
+        </div>
+
+      </div>
+      <div class="container__options__bar">
+        <button id="undo" title="Undo">
+          <span class="material-icons-outlined icon__options__bar">undo</span>
+        </button>
+        <button id="history" title="History">
+          <span class="material-icons-outlined icon__options__bar">history</span>
+        </button>
+        <button id="redo" title="Redo">
+          <span class="material-icons-outlined icon__options__bar">redo</span>
+        </button>
+      </div>
+    </div>
+
+  </main>
+  
+  <div class="container__logo">
+    <div class="logo__loader">
+    </div>
+</div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
